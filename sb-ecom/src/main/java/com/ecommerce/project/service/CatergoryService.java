@@ -10,7 +10,7 @@ public interface CatergoryService {
 
     List<Category> getAllCategories();
     String createCategory(Category category);
-    String deleteCategory(long categoryId);
+    String deleteCategory(Long categoryId);
 
-    String updateCategory(Category category, long categoryId );
+    String updateCategory(Category category, long categoryId);
 }
