@@ -31,4 +31,11 @@ public class GlobalExceptionHandler {
         errorResponse.put("error", e.getMessage());
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorResponse);
     }
+
+    @ExceptionHandler(APIException.class)
+    public ResponseEntity<Map<String, String>> apiExceptionHandler(APIException e) {
+        Map<String, String> errorResponse = new HashMap<>();
+        errorResponse.put("error", e.getMessage());
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
+    }
 }

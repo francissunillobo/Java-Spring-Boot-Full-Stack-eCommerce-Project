@@ -22,7 +22,7 @@ public class Category {
 
     @NotBlank(message = "Category name is mandatory")  // validates API input
     @NonNull                                             // Lombok null-safety
-    @Size(min = 3, max = 15, message = "Category name must be between 3 and 15 characters")
+    @Size(min = 3, max = 50, message = "Category name must be between 3 and 15 characters")
     private String categoryName;
 
 
